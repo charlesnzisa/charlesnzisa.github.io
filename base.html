@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The MkuLink App</title>
+    <!--required meta tag-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--WhatsApp Button-->
+    <script src="https://kit.fontawesome.com/1cf483120b.js" crossorigin="anonymous"></script>
+
+    <!--Adding Social Media Buttons-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--boostrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>{% block title %} {% endblock %} - Chama</title>
+</head>
+<body>
+    <div class="page-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url_for('hello') }}">The MkuLink App</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav" style="background-color: white;">
+                    <ul class="nav navbar-nav" style="font-size: 25px; margin: 15px;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('hello') }}">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">TRANSPORT SERVICES</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-bottom">
+                    &copy; mkuLink.com | Designed by Dev. Nzisa Charles
+                </div>
+                <div class="footer-content">
+                    <div class="footer-content-right">
+                        <a target="_blank" href="https://web.facebook.com/settings?tab=account&section=username"><img src="/static/icons8-facebook-48 (1).png" class="icon-style" alt="Facebook"></a>
+                        <a target="_blank" href="https://web.facebook.com/settings?tab=account&section=username"><img src="/static/icons8-linkedin-48.png" class="icon-style" alt="Linkedin"></a>
+                        <a target="_blank" href="https://twitter.com/charles_nzisa"><img src="/static/icons8-twitter-48.png" class="icon-style" alt="Twitter"></a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UC_TcRUFeRlC57vjfEIUmphQ"><img src="/static/icons8-youtube-48.png" class="icon-style" alt="youtube"></a>
+                        <a target="_blank" href="https://www.instagram.com/lochez_kog/"><img src="/static/icons8-instagram-48.png" class="icon-style" alt="instagram"></a>
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=254712778212&text=hlo"><img src="/static/icons8-whatsapp-48.png" class="icon-style" alt="whatsapp"></a>
+                    </div>
+                    <div class="footer-content-left">
+                        <a href="#" class="menu">Home</a>
+                        <a href="#" class="menu">About</a>
+                        <a href="#" class="menu">credits</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <header class="jumbotron jumbotron-fluid">
+            <div class="container-fluid text-center">
+               <h1 class="display-3">Heart Of Perfect Farming</h1>
+               <p class="leadpb-4">We Help You Diversify Your Farm Operation With Profitable Cash Crops Together With Ready Market.</p>
+               <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn More</a></p>
+            </div>
+        </header>
+        <section id="services" class="container">
+            <h2 class="display-4 text-center mt-5 mb-3">Our Services</h2>
+            
+            <div class="row text-center">
+               <div class="col-md-4 mb-4">
+                  <div class="card h-100">
+                     <img class="card-img-top" src="/static/market.jpg" alt="Agricultural Marketing">
+                     <div class="card-body">
+                        <h4 class="card-title">Agricultural Marketing</h4>
+                        <p class="card-text">Our agricultural marketing covers the services involved in moving an agricultural product from the farm to the consumer.
+                             These services involve the planning, organizing, directing and handling of agricultural produce in such a way as to satisfy farmers, intermediaries and consumers!</p>
+                     </div>
+                     <div class="card-footer py-4">
+                        <a href="#" class="btn btn-secondary">See portfolio &raquo;</a>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="col-md-4 mb-4">
+                  <div class="card h-100">
+                     <img class="card-img-top" src="/static/cash.jpg" alt="Agribusiness">
+                     <div class="card-body">
+                        <h4 class="card-title">Agribusiness</h4>
+                           <p class="card-text">Provide short to Medium term credit facility to help farmers in purchase of farm inputs such as seeds, fertilizers and chemicals,
+                             pay for lease of additional agricultural land, buy livestock, meet their harvesting and marketing costs and also finance other social development needs!</p>
+                     </div>
+                     <div class="card-footer py-4">
+                        <a href="#" class="btn btn-secondary">See requirement &raquo;</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                   <img class="card-img-top" src="/static/analytics.webp" alt="Farm Analytics">
+                   <div class="card-body">
+                      <h4 class="card-title">Farm Analytics</h4>
+                      <p class="card-text">Consult our experts to help optimize crop management by providing insights on crop health, soil quality, weather patterns, and other factors that affect 
+                          crop growth and yield. By leveraging this information, farmers can make data-driven decisions to improve crop management practices and increase yields.</p>
+                   </div>
+                   <div class="card-footer py-4">
+                      <a href="#" class="btn btn-secondary">See testimonials &raquo;</a>
+                   </div>
+                </div>
+             </div>
+            </div>
+         </section>
+        <section class="container-fluid text-center py-4 mt-4" id="contact">
+            <h2 class="display-4 pb-4 my-4">Get in touch with us today!</h2>
+            <p class="lead pb-3">Send us a message and we will get back to 
+            you as soon as possible.</p>
+            <a href="#" class="btn btn-primary btn-lg mb-4" role="button">contact us now</a>
+         </section>
+
+
+    <div class="container">
+        {% block content %} {% endblock %}
+    </div>
+
+    <!-- Optional JavaScript -->
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    </div>
+</body>
+</html>
